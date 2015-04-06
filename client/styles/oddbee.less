@@ -1,0 +1,375 @@
+#oddbee{
+
+  // ------ FONTS ------
+  font-size: 62.5%;
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  @font-face {
+    font-family: HelveticaNeue;
+    src: url('../assets/oddbee/fonts/helveticaneue_ultraligcond.woff');
+  }
+  @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+.header-fonts() {
+  font-family: 'Roboto', Helvetica,Arial,sans-serif;
+  font-size:1.8em;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  color: #222222;
+}
+.big-header-fonts() {
+  .header-fonts();
+  font-size:5em;
+  font-weight: normal;
+  display:inline-block;
+    transform:scale(1,1.3); /* W3C */
+    -webkit-transform:scale(1,1.3); /* Safari and Chrome */
+    -moz-transform:scale(1,1.3); /* Firefox */
+    -ms-transform:scale(1,1.3); /* IE 9 */
+    -o-transform:scale(1,1.3); /* Opera */
+  text-align: center;
+}
+.para-fonts() {
+  font-family: Dosis,"HelveticaNeue",Helvetica,Helvetica,Arial,sans-serif;
+}
+
+  //------ ICONS ------
+  .icon {
+    display: block;
+    text-indent: -9999px;
+    .header-fonts()
+  }
+
+
+  // ----- MAIN BODY -----
+  #body {
+      background-color: #36c3e5;
+      color: #222;
+      //font-family: Dosis,"Open Sans",Helvetica,Helvetica,Arial,sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1;
+      position: relative;
+      cursor: default;
+      height: auto;
+      min-width: 1000px;
+      height: 796vh;
+      position: relative;
+      margin: 0;
+    }
+  #logo {
+      background: url('../assets/oddbee/oddbee-sprite@2x.png') top left no-repeat;
+      background-position: -400px 0;
+      height: 50px;
+      width: 190px;
+      position: fixed;
+      z-index: 1000;
+      top: 18px;
+      left: 13%;
+  }
+  #logoWhite {
+    background: url('../assets/oddbee/oddbee-sprite@2x.png') top left no-repeat;
+    background-position: -400px -51px;
+    height: 50px;
+    width: 190px;
+    position: fixed;
+    z-index: 1000;
+    top: 18px;
+    left: 13%;
+  }
+
+  #nav-top {}
+
+  //----- LANDING PAGE -----
+
+  #copter-holder {
+    position: absolute;
+    top: 38vh;
+    left: auto;
+    width: 100%;
+    height:400px;
+
+  }
+  #copter-right-way {
+    position: absolute;
+    top:0;
+    width:100%;
+    height:150px;
+    z-index: 3;
+    background-image: url("../assets/oddbee/plane-desktop.png");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  #copter-reflection {
+    background-image: url("../assets/oddbee/plane-reflection-desktop.png");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index:2;
+    top:180px;
+    height:160px;
+    width: 100%;
+  }
+  #copter-hex {
+    background-image: url("../assets/oddbee/hexagon-plane-desktop.png");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -90px;
+    z-index: 50;
+    height:100%;
+    width:100%;
+  }
+
+  #copter-blade {
+    animation-name: spin;
+    animation-duration: 20ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 20ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 20ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 20ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/oddbee/propeller-desktop-retina.png");
+    background-size: 100% 100%;
+  }
+
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+  }
+
+  .cloud {
+      z-index: 5;
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      background-size: 100% auto;
+    }
+    #top-left{
+      background-image: url("../assets/oddbee/clouds-left.png");
+      background-repeat: no-repeat;
+      top: 80px;
+      left:0;
+    }
+    #bottom-left{
+      background-image: url("../assets/oddbee/clouds-left.png");
+      background-repeat: no-repeat;
+      top: 310px;
+      left:0;
+      -moz-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+
+    }
+    #top-right{
+      background-image: url("../assets/oddbee/clouds-right.png");
+      background-repeat: no-repeat;
+      top: 80px;
+      right:0;
+    }
+    #bottom-right{
+      background-image: url("../assets/oddbee/clouds-right.png");
+      background-repeat: no-repeat;
+      top: 310px;
+      right:0;
+      -moz-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+    }
+
+
+  #down{
+    animation-name:bounce;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+
+    background: url('../assets/oddbee/oddbee-sprite@1x.png') top left no-repeat;
+    background-position: -200px -60px;
+    width:60px;
+    height:60px;
+    position: absolute;
+    top: 630px;
+    left:48%;
+    z-index: 100;
+  }
+
+//----- BEE VISION -----
+  #bee-vision {
+    position:absolute;
+    top:125vh;
+    height:100vh;
+    width:100%;
+    z-index:2;
+    ;
+  }
+  #bee-blurb {
+    position: absolute;
+    z-index: 4;
+    top: 100px;
+    background-image: url('../assets/oddbee/hexagon-mission-desktop.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 100%;
+    height:400px;
+    .header-fonts();
+    text-align: center;
+    padding-top:25px;
+  }
+  #bee-blurb p {
+    .para-fonts();
+    margin: 0 420px;
+    line-height: 2;
+  }
+//----- SERVICES -----
+
+  #services {
+    background-color: #fcb533;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    top: 225vh;
+    position: absolute;
+    z-index:1;
+    text-align: center;
+  }
+  #services h2{
+    .big-header-fonts();
+    text-align: center;
+  }
+  .nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+  }
+
+  #services .nav a:link, a:visited {
+    color: #222;
+    padding: 3px;
+    text-decoration: none;
+    .header-fonts();
+    font-weight: bolder;
+  }
+  #services .nav a:hover {
+    border: 1px #222 solid;
+    border-radius: 5px;
+    color: #222;
+    padding: 3px;
+    text-decoration: none;
+    .header-fonts();
+    font-weight: bolder;
+  }
+  #services .nav .selected a {
+    border: 1px #222 solid;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 3px;
+    text-decoration: none;
+    .header-fonts();
+    font-weight: bolder;
+    color: #fcb533;
+  }
+  #servicesText {
+    position: absolute;
+    width: 800px;
+    text-align: justify;
+    left: 18%;
+    .header-fonts();
+    line-height: 1.7em;
+  }
+//----- WORK ------
+  #work {
+    height: 180vh;
+    width: 100%;
+    background-color: #222222;
+    top: 325vh;
+    position: absolute;
+    z-index:2;
+    border-bottom: white 10px dashed;
+    text-align: center;
+
+  h2 {
+    .big-header-fonts();
+    text-align: center;
+    color: #ffffff;
+  }
+  }
+
+//----- CREW -----
+  #crew {
+    height: 160vh;
+    width: 100%;
+    background-color: #222222;
+    top: 505vh;
+    position: absolute;
+    z-index:2;
+    text-align: center;
+
+    h2 {
+      .big-header-fonts();
+      text-align: center; }
+      color: #36c3e5;
+  }
+
+//----- CONTACT -----
+  #contact {
+    background-color: #fcb533;
+    height: 130vh;
+    width:100%;
+    top: 665vh;
+    position: absolute;
+    z-index:2;
+    text-align: center;
+
+    h2 {
+      .big-header-fonts();
+      text-align: center; }
+  }
+
+}

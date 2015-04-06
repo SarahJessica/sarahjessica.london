@@ -1,0 +1,71 @@
+extends ../index
+block content
+  #oddbee
+    
+    #body
+      #nav-top
+      
+      #logo.icon
+        h1 ODDBEE
+      #logoWhite.icon(data-0="opacity: 0", data-325p="opcacity:1")
+        
+      #copter-holder  
+        #copter-right-way(data-400-top='top: 0', data-250-top='top: -200px')
+          #copter-blade
+        #copter-reflection(data-400-top='bottom: 180vh', data-250-top='bottom: -200vh')
+        #copter-hex
+      #top-left.cloud
+      .cloud#top-right
+      .cloud#bottom-left
+      .cloud#bottom-right
+      a(href='#bee-vision')
+        #down()
+      
+      #bee-vision
+        #bee-blurb
+          h2 BEE VISION
+          p We're an innovative and lean design and web development studio. We create custom-tailored web and mobile solutions that help our clients, big or small, succeed online and offline.
+      
+      #services
+        h2 SERVICES
+        #servicesNav.nav
+          ul
+            li.selected: a(href="#") DESIGN
+            li.normal: a(href="#") DEVELOPMENT
+            li.normal: a(href="#") CONTENT
+            li.normal: a(href="#") MARKETING
+          #servicesText
+            p 
+              b "Design is more than just a pretty pricture. Design is problem solving, it is an experience, a journey."
+            p Design isn’t just some funky colors and cute fonts, and it’s more than just a pretty picture. For an effective web presence, form should follow function and design should foster communications. Today’s customers are smart and picky, and should not be underestimated.
+            p At Oddbee we know how to create designs that work for your business. We create designs that spark meaningful conversations. What matters most is what speaks to your target audience, helping them see that you can provide the services and products that they need.
+        
+      #work
+        h2 WORK
+        
+      #crew
+        h2 CREW 
+          
+      #contact
+        H2 CONTACT
+        
+        script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+        script(type='text/javascript', src='../assets/oddbee/js/skrollr.min.js')
+            
+        script.
+          var s = skrollr.init();
+        script.
+          $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+          $('html,body').animate({
+          scrollTop: target.offset().top
+          }, 1000);
+          return false;
+          }
+          }
+          });
+          });
